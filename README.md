@@ -13,7 +13,7 @@ Real-time instance segmentation and object detection for football matches, capab
 ## 📸 Preview
 
 ### Detection Results
-![Example 1](preview/exemple1.png)
+![Example 1](preview/example1.png)
 *Football match with detected players and objects*
 
 ![Example 2](preview/example2.png)
@@ -25,39 +25,50 @@ Real-time instance segmentation and object detection for football matches, capab
 ## 🎥 Demo Video
 
 Check out the real-time detection in action:
-- **Demo Video**: `video3.mp4` - Shows live instance segmentation and object detection on football footage
+- **Demo Video**: `demo_video.mp4` - Shows live instance segmentation and object detection on football footage
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 ```bash
-pip install ultralytics opencv-python torch torchvision
+pip install -r requirements.txt
 ```
 
 ### Usage
+
+**Basic Video Detection:**
 ```python
-python test.py
+python football_detector.py
 ```
 
-This will process `video3.mp4` and generate `output.avi` with detection results.
+**Image Processing:**
+```python
+python image_detector.py
+```
+
+**Advanced Video Segmentation:**
+```python
+python video_segmentation.py
+```
 
 ## 📁 Project Structure
 
 ```
-├── preview/                 # Example detection results
-│   ├── exemple1.png
+├── preview/                    # Example detection results
+│   ├── example1.png
 │   ├── example2.png
 │   └── example3.png
-├── train2/                  # Training artifacts
+├── train2/                     # Training artifacts
 │   └── weights/
-│       ├── best.pt         # Best trained model
-│       └── last.pt         # Latest checkpoint
-├── test.py                 # Basic detection script
-├── test2.py               # Alternative implementation
-├── test3.py               # Enhanced version
-├── test4.py               # GPU-optimized version
-├── video3.mp4             # Demo input video
-└── yolov8n.pt            # Base YOLO model
+│       ├── best.pt            # Best trained model
+│       └── last.pt            # Latest checkpoint
+├── football_detector.py        # Main video detection script
+├── image_detector.py          # Single image processing
+├── video_segmentation.py      # Advanced video segmentation
+├── demo_video.mp4             # Demo input video
+├── sample_image.png           # Sample test image
+├── requirements.txt           # Python dependencies
+└── yolov8n.pt                # Base YOLO model
 ```
 
 ## 🔧 Model Details
